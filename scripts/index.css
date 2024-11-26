@@ -64,10 +64,10 @@ html {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: -1; 
+    z-index: -1;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;  
+    background-attachment: fixed;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -75,7 +75,7 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; 
+    object-position: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -252,3 +252,73 @@ main {
     height: 700px;
     border: none;
 }
+
+.aboutus-text {
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    width: 80%;/
+}
+
+.aboutus-text {
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.aboutus-text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 4px;
+    background-color: blue;
+    margin-top: 10px;
+}
+
+.about-us-content {
+    padding: 40px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 8px;
+    text-align: left;
+
+}
+
+.about-us-content h2 {
+    font-size: 2rem;
+    color: #0033cc;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.about-us-content p {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 30px;
+
+}
+
