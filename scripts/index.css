@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +11,13 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+
 }
 
+/* Sticky Header */
 .sticky-header {
     position: sticky;
     top: 0;
@@ -51,31 +57,43 @@ html {
     background-color: #0e0e0e;
 }
 
+/* Fullscreen Section */
 .fullscreen-section {
     position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    z-index: -1; 
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;  
+    transition: transform 0.3s ease-in-out;
 }
 
 .fullscreen-section .Carimage {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center; 
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+/* Main Content */
 main {
     text-align: center;
     word-wrap: break-word;
 }
 
+/* Section Headings */
 .fbiText h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     color: #000000;
     text-transform: uppercase;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0;
 }
 
 .welcome-section {
@@ -91,6 +109,7 @@ main {
     color: #ffffff;
 }
 
+/* Speech Text */
 .speechText {
     margin-top: -1.5rem;
 }
@@ -107,6 +126,7 @@ main {
     text-align: center;
 }
 
+/* Highlight Text */
 .interestedText em {
     font-size: 20px;
     color: #1b1b1b;
@@ -114,6 +134,7 @@ main {
     font-weight: bolder;
 }
 
+/* Learn Button */
 .learn-btn {
     background-color: #0033cc;
     color: white;
@@ -123,13 +144,14 @@ main {
     cursor: pointer;
     border-radius: 3px;
     margin-top: 25px;
-    transition: background-color .5s ease;
+    transition: background-color 0.5s ease;
 }
 
 .learn-btn:hover {
     background-color: #00134d;
 }
 
+/* Image Gallery */
 .images {
     display: flex;
     justify-content: center;
@@ -143,6 +165,7 @@ main {
     max-width: 400px;
     position: relative;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .item img {
@@ -150,19 +173,18 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Dropdown Content */
 .dropdown {
     display: none;
     margin-top: 10px;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    width: 100%; 
-    padding: 15px; 
-    background-color: white; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    border-radius: 8px; 
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .dropdown h3 {
@@ -173,25 +195,22 @@ main {
 
 .dropdown p {
     margin: 10px 0;
-    font-size: 14px;
-    font-size: large;
-    color: rgba(33, 33, 33, 1);
     font-size: 13pt;
     line-height: 1.6;
+    color: rgba(33, 33, 33, 1);
 }
 
-.images .item {
-    position: relative;
-    text-align: center;
-    margin-bottom: 20px;
+.visible {
+    display: block;
 }
 
-.item {
-    position: relative;
-    display: inline-block;
-}
-
+/* Dropdown Button */
 .dropdown-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
@@ -199,23 +218,12 @@ main {
     width: 50px;
     height: 50px;
     font-size: 20px;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, background-color 0.2s;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.dropdown-btn span {
-    display: inline-block;
-    padding: 0 5px;
 }
 
 .dropdown-btn:hover {
@@ -227,10 +235,7 @@ main {
     outline: none;
 }
 
-.visible {
-    display: block;
-}
-
+/* Video Section */
 .video {
     width: 90%;
     max-width: 1280px;
@@ -244,6 +249,6 @@ main {
 
 .video iframe {
     width: 100%;
-    height: 563px; 
+    height: 700px;
     border: none;
 }
