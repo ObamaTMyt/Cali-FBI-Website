@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FBI Website</title>
     <link rel="stylesheet" href="scripts/index.css">
+
 </head>
 
 <body>
@@ -13,17 +14,18 @@
         <div class="logo"><a href="index.html">FBI</a></div>
         <nav>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="/sites/aboutus.html">About Us</a></li>
-                <li><a href="#coc">Chain of Command</a></li>
-                <li><a href="#structures">Department Structures</a></li>
-                <li><a href="#awards">Department Awards</a></li>
+                <li><a href="../index.html" id="home-link">Home</a></li>
+                <li><a href="/sites/aboutus.html" id="about-link">About Us</a></li>
+                <li><a href="/sites/coc.html" id="coc-link">Chain of Command</a></li>
+                <li><a href="/sites/subdivisions.html" id="subdivisions">Subdivisions</a></li>
+                <li><a href="/sites/structures.html" id="structures-link">Department Structures</a></li>
+                <li><a href="/sites/awards.html" id="awards-link">Department Awards</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="fullscreen-section">
-        <img src="images/header.png" alt="FBI" class="Carimage">
+    <section class="fullscreen-section">
+        <img src="images/hrt2.png" alt="FBI" class="Carimage">
     </section>
 
     <main>
@@ -51,12 +53,18 @@
         <section class="interestedText">
             <div>
                 <p><em>Interested in applying to the FBI?</em></p>
-                <a href="https://forms.gle/2re6mwr31xxGywsEA" target="_blank">
-                    <button class="learn-btn">Learn More</button>
-                </a>
+                <button class="learn-btn" onclick="openModal()">Learn More</button>
             </div>
         </section>
-        
+
+        <div id="formModal" class="modal" onclick="closeModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="close-btn" onclick="closeModal()">Close</button>
+                <iframe src="https://forms.gle/gkqzSDQnpKj6iZU56" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
 
         <section class="images">
             <!-- Image 1 -->
@@ -110,6 +118,24 @@
     </main>
 
     <script src="scripts/dropdowns.js"></script>
+    <script src="scripts/hightlight.js"></script>
+
+    <script>
+        function openModal() {
+            const scrollY = window.scrollY;
+            document.documentElement.style.position = 'fixed';
+            document.documentElement.style.top = `-${scrollY}px`;
+            document.getElementById('formModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            const scrollY = Math.abs(parseInt(document.documentElement.style.top || '0', 10));
+            document.documentElement.style.position = '';
+            document.documentElement.style.top = '';
+            window.scrollTo(0, scrollY);
+            document.getElementById('formModal').style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
