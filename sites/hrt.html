@@ -17,12 +17,19 @@
                 <li><a href="../index.html" id="home-link">Home</a></li>
                 <li><a href="/sites/aboutus.html" id="about-link">About Us</a></li>
                 <li><a href="/sites/coc.html" id="coc-link">Chain of Command</a></li>
-                <li><a href="/sites/subdivisions.html" id="subdivisions-link">Subdivisions</a></li>
-                <li><a href="/sites/structures.html" id="structures-link">Department Structures</a></li>
+                <li class="dropdown-parent">
+                    <a href="/sites/structures.html" id="structures-link">Department Structures</a>
+                    <div class="dropdown-menu">
+                        <a href="/sites/ftd.html">FTD Roster</a>
+                        <a href="/sites/hrt.html">HRT Roster</a>
+                    </div>
+                </li>
                 <li><a href="/sites/awards.html" id="awards-link">Department Awards</a></li>
             </ul>
         </nav>
     </header>
+
+
 
     <section class="fullscreen-section" id="hrtImage">
         <img src="../images/hrt.png" alt="FBI Hostage Rescue Team Logo" class="Carimage">
@@ -58,8 +65,20 @@
             <h4>M. Bradford</h4>
         </section>
 
+        <section class="hrt-info">
+            <div class="hrt-info-text">
+                <h2>Hostage Rescue Team Information</h2>
+                <p>The FBI Hostage Rescue Team (HRT) is the premier tactical unit specializing in counterterrorism,
+                    hostage rescue, and high-risk operations. Known as the best tactical team in California Roleplay,
+                    HRT provides unmatched rapid-response capabilities for critical situations. With rigorous training
+                    in tactics, marksmanship, and close-quarters combat, the team is dedicated to saving lives and
+                    ensuring safety in even the most challenging scenarios. Their precision, dedication, and teamwork
+                    set the standard for tactical excellence.</p>
+            </div>
+        </section>
+
         <section class="ftd-roster">
-            <div class="ftd-roster-text">
+            <div class="hrt-roster-text">
                 <h2>HRT ROSTER</h2>
             </div>
         </section>
@@ -72,11 +91,17 @@
             </div>
         </section>
 
-
-
-
-
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Get in touch with me <a href="http://www.discordapp.com/users/314403159558848543"
+                    target="_blank">Obamayt</a></p>
+            <p>&copy; California Roleplay 2024</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/header.js"></script>
 
 </body>
 

@@ -17,29 +17,43 @@
                 <li><a href="../index.html" id="home-link">Home</a></li>
                 <li><a href="/sites/aboutus.html" id="about-link">About Us</a></li>
                 <li><a href="/sites/coc.html" id="coc-link">Chain of Command</a></li>
-                <li><a href="/sites/subdivisions.html" id="subdivisions">Subdivisions</a></li>
-                <li><a href="/sites/structures.html" id="structures-link">Department Structures</a></li>
+                <li class="dropdown-parent">
+                    <a href="/sites/structures.html" id="structures-link">Department Structures</a>
+                    <div class="dropdown-menu">
+                        <a href="/sites/ftd.html">FTD Roster</a>
+                        <a href="/sites/hrt.html">HRT Roster</a>
+                    </div>
+                </li>
                 <li><a href="/sites/awards.html" id="awards-link">Department Awards</a></li>
             </ul>
         </nav>
     </header>
 
+
     <section class="fullscreen-section">
-        <img src="images/hrt2.png" alt="FBI" class="Carimage">
+        <img src="images/index/banner.png" alt="FBI" class="Carimage">
+        <div class="fbi-text">
+            <span class="line1">Feder Bureau</span>
+            <span class="line2">Of Investigations</span>
+        </div>
+    </section>
+
+    <section class="fbiText">
+        <div>
+            <p></p>
+        </div>
     </section>
 
     <main>
-        <section class="fbiText">
-            <div>
-                <h1>Federal Bureau of Investigations</h1>
-            </div>
-        </section>
+
 
         <section class="welcome-section">
             <div class="welcome-row">
                 <h2>WELCOME</h2>
             </div>
         </section>
+
+
 
         <section class="speechText">
             <div>
@@ -66,10 +80,11 @@
 
 
 
+
         <section class="images">
             <!-- Image 1 -->
             <div class="item">
-                <img src="images/car.png" alt="car">
+                <img src="images/index/car.png" alt="car">
                 <button class="dropdown-btn">▼</button>
                 <div class="dropdown">
                     <h3>Vehicle Structure</h3>
@@ -80,7 +95,7 @@
 
             <!-- Image 2 -->
             <div class="item">
-                <img src="images/officer.png" alt="Agent">
+                <img src="images/coc.png" alt="Agent">
                 <button class="dropdown-btn">▼</button>
                 <div class="dropdown">
                     <h3>FBI Uniform Structure</h3>
@@ -91,7 +106,7 @@
 
             <!-- Image 3 -->
             <div class="item">
-                <img src="images/heli.png" alt="heli">
+                <img src="images/index/heli.png" alt="heli">
                 <button class="dropdown-btn">▼</button>
                 <div class="dropdown">
                     <h3>SUB DIVISIONS</h3>
@@ -117,25 +132,19 @@
 
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <p>Get in touch with me <a href="http://www.discordapp.com/users/314403159558848543"
+                    target="_blank">Obamayt</a></p>
+            <p>&copy; California Roleplay 2024</p>
+        </div>
+    </footer>
+
+    <script src="scripts/header.js"></script>
     <script src="scripts/dropdowns.js"></script>
     <script src="scripts/hightlight.js"></script>
 
-    <script>
-        function openModal() {
-            const scrollY = window.scrollY;
-            document.documentElement.style.position = 'fixed';
-            document.documentElement.style.top = `-${scrollY}px`;
-            document.getElementById('formModal').style.display = 'block';
-        }
 
-        function closeModal() {
-            const scrollY = Math.abs(parseInt(document.documentElement.style.top || '0', 10));
-            document.documentElement.style.position = '';
-            document.documentElement.style.top = '';
-            window.scrollTo(0, scrollY);
-            document.getElementById('formModal').style.display = 'none';
-        }
-    </script>
 </body>
 
 </html>

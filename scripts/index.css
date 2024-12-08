@@ -11,25 +11,40 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     position: relative;
     scroll-behavior: smooth;
 }
 
-/* Sticky Header */
+body {
+    background-color: black;
+}
+
+main {
+    background-color: white;
+}
+
 .sticky-header {
     position: sticky;
     top: 0;
-    background-color: #000;
-    color: #fff;
+    z-index: 1000;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-weight: bolder;
 }
+
+.sticky-header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+}
+
 
 .sticky-header .logo a {
     text-decoration: none;
@@ -41,7 +56,7 @@ html {
 .sticky-header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .sticky-header nav a {
@@ -53,12 +68,16 @@ html {
 }
 
 .sticky-header nav a:hover {
-    background-color: #0e0e0e;
+    background-color: #272727;
+    transition: padding 0.5s ease, background-color 0.5s ease;
 }
+
+
 
 nav a.active {
     background-color: #0e0e0e;
     color: #fff;
+
 }
 
 /* Fullscreen Section */
@@ -92,13 +111,11 @@ main {
 }
 
 /* Section Headings */
-.fbiText h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-    color: #000000;
-    text-transform: uppercase;
-    padding: 3rem 0;
+.fbiText {
+    padding: 4rem;
+    background: white;
 }
+
 
 .welcome-section {
     background: blue;
@@ -176,6 +193,7 @@ main {
 }
 
 .item img {
+    height: 25rem;
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -281,7 +299,6 @@ main {
     font-weight: bold;
     padding-bottom: 10px;
     width: 80%;
-    font-family: 'Black Ops One', Arial, sans-serif;
 
 }
 
@@ -304,7 +321,7 @@ main {
     width: 80%;
     max-width: 1200px;
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -342,12 +359,10 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #0000001f;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
     max-width: 700px;
-    box-shadow: 0px 2px 4px rgba(114, 112, 255, 0.5);
 }
 
 /* Styling the iframe */
@@ -404,6 +419,43 @@ body.no-scroll {
     background-color: #143c04;
     margin-top: 10px;
 }
+
+.hrt-roster-text {
+    color: #ff8800;
+
+}
+
+.hrt-info {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+    margin-top: 120px;
+
+}
+
+
+
+.hrt-info-text {
+    line-height: 1.5;
+    font-family: 'Black Ops One', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 200px;
+    font-size: 1.5rem;
+
+}
+
+.hrt-info-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff8800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+}
+
 
 .hrt-deputy,
 .hrt-command,
@@ -475,7 +527,7 @@ body.no-scroll {
 .hrt-roster-text h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #ff8800;
     margin-top: 40px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     font-family: 'Black Ops One', Arial, sans-serif;
@@ -487,13 +539,13 @@ body.no-scroll {
 }
 
 .hrtHC {
-    color: white;
+    color: #ff8800;
     background-color: #143c04;
     font-family: 'Black Ops One', Arial, sans-serif;
     font-size: 2.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 
 
@@ -547,7 +599,6 @@ nav ul li {
 
 
 
-/* General styles for FTD */
 .ftd-text {
     text-transform: uppercase;
     line-height: 1.2;
@@ -561,7 +612,7 @@ nav ul li {
     font-weight: bold;
     padding-bottom: 10px;
     width: 80%;
-    max-width: 700px;
+    max-width: 6000px;
     font-family: 'Black Ops One', Arial, sans-serif;
 }
 
@@ -571,11 +622,41 @@ nav ul li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
+    width: 800px;
     height: 4px;
     background-color: #04044c;
     margin-top: 10px;
 }
+
+.ftd-info {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+    margin-top: 120px;
+}
+
+.ftd-info-text {
+    line-height: 1.5;
+    font-family: 'Black Ops One', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 200px;
+    font-size: 1.5rem;
+
+}
+
+.ftd-info-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fcd404;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+}
+
+
 
 .ftd-deputy,
 .ftd-command,
@@ -614,7 +695,7 @@ nav ul li {
 .ftd-assistant h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff8800;
+    color: #fcd404;
     margin-top: 10px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -649,6 +730,8 @@ nav ul li {
     margin-top: 40px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     font-family: 'Black Ops One', Arial, sans-serif;
+    color: #fcd404;
+
 }
 
 .ftdMain {
@@ -656,12 +739,170 @@ nav ul li {
 }
 
 .ftdHc {
-    color: white;
+    color: #fcd404;
     background-color: #04044c;
     font-family: 'Black Ops One', Arial, sans-serif;
     font-size: 2.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 
+.dropdown-parent {
+    position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 15px;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Dropdown Links */
+.dropdown-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 1px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Hover Effects */
+.dropdown-parent:hover .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    width: 240px;
+}
+
+.dropdown-menu:not(:hover) {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+}
+
+.fbi-text .line1,
+.fbi-text .line2 {
+    display: block;
+}
+
+.fbi-text {
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    width: 90%;
+    max-width: 1200px;
+
+}
+
+.fbi-text .line1 {
+    font-size: 60px;
+}
+
+.fbi-text .line2 {
+    font-size: 65px;
+}
+
+.fbi-text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 4px;
+    background-color: #04044c;
+    margin-top: 20px;
+}
+
+.chain-of-command {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    margin-right: 4em;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 2.5em;
+}
+
+.details h2 {
+    margin: 0 0 1em;
+    font-size: 1.8em;
+    font-family: 'Open Sans', Arial;
+}
+
+.details p {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-family: Merriweather, Arial;
+}
+
+footer {
+    background-color: #0000FF;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+footer a {
+    color: #FF00FF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

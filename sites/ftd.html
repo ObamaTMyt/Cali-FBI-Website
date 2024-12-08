@@ -17,20 +17,27 @@
                 <li><a href="../index.html" id="home-link">Home</a></li>
                 <li><a href="/sites/aboutus.html" id="about-link">About Us</a></li>
                 <li><a href="/sites/coc.html" id="coc-link">Chain of Command</a></li>
-                <li><a href="/sites/subdivisions.html" id="subdivisions-link">Subdivisions</a></li>
-                <li><a href="/sites/structures.html" id="structures-link">Department Structures</a></li>
+                <li class="dropdown-parent">
+                    <a href="/sites/structures.html" id="structures-link">Department Structures</a>
+                    <div class="dropdown-menu">
+                        <a href="/sites/ftd.html">FTD Roster</a>
+                        <a href="/sites/hrt.html">HRT Roster</a>
+                    </div>
+                </li>
                 <li><a href="/sites/awards.html" id="awards-link">Department Awards</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="fullscreen-section" id="hrtImage">
-        <img src="../images/ftdimage.png" alt="FBI Hostage Rescue Team Logo" class="Carimage">
+        <img src="../images/ftdimage.png" class="Carimage">
         <div class="ftd-text">
             <h1>
-                FIELD TRAINING DIVISION
+                Field<br>
+                Training Division
             </h1>
         </div>
+
     </section>
 
     <main class="ftdMain">
@@ -60,6 +67,26 @@
             <h4>M. Bradford</h4>
         </section>
 
+        <section class="ftd-info">
+            <div class="ftd-info-text">
+                <h2> Field Training Division Information</h2>
+
+                <p>
+                    The FBI's Field Training Division (FTD) serves as the foundation for preparing the agency's finest
+                    operatives. Tasked with equipping agents with advanced skills and knowledge, FTD focuses on rigorous
+                    training programs that emphasize tactical precision, critical decision-making, and teamwork. As the
+                    gateway for agents entering the FBI's elite units, FTD ensures that every member meets the highest
+                    standards of excellence.
+
+                    Within FiveM, the Field Training Division stands out as a cornerstone of professionalism and
+                    discipline, helping agents transition from training to real-world operations. Their unmatched
+                    dedication to building highly skilled teams has earned them recognition as the backbone of the
+                    bureau's operational success. With FTD, every agent is set up to thrive in the dynamic and demanding
+                    environment of California Roleplay.
+                </p>
+            </div>
+        </section>
+
         <section class="ftd-roster">
             <div class="ftd-roster-text">
                 <h2>FTD ROSTER</h2>
@@ -74,11 +101,17 @@
             </div>
         </section>
 
-
-
-
-
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Get in touch with me <a href="http://www.discordapp.com/users/314403159558848543"
+                    target="_blank">Obamayt</a></p>
+            <p>&copy; California Roleplay 2024</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/header.js"></script>
 
 </body>
 
