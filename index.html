@@ -14,133 +14,133 @@
 </head>
 
 <body>
-    <div id="overlay">
-
-        <header class="sticky-header">
-            <div class="logo"><a href="index.html">FBI</a></div>
 
 
-            <nav>
-                <ul>
-                    <li><a href="../index.html" id="home-link">Home</a></li>
-                    <li><a href="/sites/aboutus.html" id="about-link">About Us</a></li>
-                    <li><a href="/sites/coc.html" id="coc-link">Chain of Command</a></li>
-                    <li class="dropdown-parent">
-                        <a href="/sites/structures.html" id="structures-link">Department Structures</a>
-                        <div class="dropdown-menu">
-                            <a href="/sites/ftd.html">FTD Roster</a>
-                            <a href="/sites/hrt.html">HRT Roster</a>
-                        </div>
-                    </li>
-                    <li><a href="/sites/awards.html" id="awards-link">Department Awards</a></li>
-                </ul>
-            </nav>
+    <header class="sticky-header">
+        <div class="logo"><a href="index.html">FBI</a></div>
 
 
-        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="/sites/aboutus.html" id="about-link">About Us</a></li>
+                <li><a href="/sites/coc.html" id="coc-link">Chain of Command</a></li>
+                <li class="dropdown-parent">
+                    <a href="/sites/structures.html" id="structures-link">Department Structures</a>
+                    <div class="dropdown-menu">
+                        <a href="/sites/ftd.html">FTD Roster</a>
+                        <a href="/sites/hrt.html">HRT Roster</a>
+                    </div>
+                </li>
+                <li><a href="/sites/awards.html" id="awards-link">Department Awards</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
 
 
 
-        <section class="fullscreen-section">
-            <img src="images/index/banner.png" alt="FBI" class="Carimage">
-            <div class="fbi-text">
-                <span class="line1">Federal Bureau</span>
-                <span class="line2">Of Investigations</span>
+    <section class="fullscreen-section">
+        <img src="images/index/banner.png" alt="FBI" class="Carimage">
+        <div class="fbi-text">
+            <span class="line1">Federal Bureau</span>
+            <span class="line2">Of Investigations</span>
+        </div>
+    </section>
+
+
+
+    <section class="fbiText">
+        <div>
+            <p></p>
+        </div>
+    </section>
+
+    <main>
+
+
+        <section class="welcome-section">
+            <div class="welcome-row">
+                <h2>WELCOME</h2>
             </div>
         </section>
 
 
 
-        <section class="fbiText">
+        <section class="speechText">
             <div>
-                <p></p>
+                <p>
+                    This terminal is to be used by only those with proper credentials. Any person found in violation
+                    of
+                    this will be held accountable to the fullest extent of the law.
+                </p>
             </div>
         </section>
 
-        <main>
+        <section class="interestedText">
+            <div>
+                <p><em>Interested in applying to the FBI?</em></p>
+                <button class="learn-btn" onclick="openModal()">Learn More</button>
+            </div>
+        </section>
+
+        <div id="formModal" class="modal" onclick="closeModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="close-btn" onclick="closeModal()">Close</button>
+                <iframe src="https://forms.gle/gkqzSDQnpKj6iZU56" allowfullscreen></iframe>
+            </div>
+        </div>
 
 
-            <section class="welcome-section">
-                <div class="welcome-row">
-                    <h2>WELCOME</h2>
+
+
+        <section class="images">
+            <!-- Image 1 -->
+            <div class="item">
+                <img src="images/index/car.png" alt="car">
+                <button class="dropdown-btn">▼</button>
+                <div class="dropdown">
+                    <h3>Vehicle Structure</h3>
+                    <p>Our unique Vehicle Structure stands out from the rest and allows us to maintain the high
+                        visibility needed to protect our citizens!</p>
                 </div>
-            </section>
+            </div>
 
+            <!-- Image 2 -->
+            <div class="item">
+                <img src="images/coc.png" alt="Agent">
+                <button class="dropdown-btn">▼</button>
+                <div class="dropdown">
+                    <h3>FBI Uniform Structure</h3>
+                    <p>The Uniform Structure for the FBI provides high quality for our Agents while also allowing
+                        for
+                        comfortable custom uniforms that enable our Agents to perform at their highest!</p>
+                </div>
+            </div>
 
-
-            <section class="speechText">
-                <div>
-                    <p>
-                        This terminal is to be used by only those with proper credentials. Any person found in violation
-                        of
-                        this will be held accountable to the fullest extent of the law.
+            <!-- Image 3 -->
+            <div class="item">
+                <img src="images/index/heli.png" alt="heli">
+                <button class="dropdown-btn">▼</button>
+                <div class="dropdown">
+                    <h3>SUB DIVISIONS</h3>
+                    <p>Here at the FBI, we offer many Sub Divisions that afford us the ability to respond to any
+                        situations.
+                        From high-speed chases to having eyes in the sky, we are more than capable to answer the
+                        call!
                     </p>
                 </div>
-            </section>
-
-            <section class="interestedText">
-                <div>
-                    <p><em>Interested in applying to the FBI?</em></p>
-                    <button class="learn-btn" onclick="openModal()">Learn More</button>
-                </div>
-            </section>
-
-            <div id="formModal" class="modal" onclick="closeModal()">
-                <div class="modal-content" onclick="event.stopPropagation()">
-                    <button class="close-btn" onclick="closeModal()">Close</button>
-                    <iframe src="https://forms.gle/gkqzSDQnpKj6iZU56" allowfullscreen></iframe>
-                </div>
             </div>
+        </section>
 
-
-
-
-            <section class="images">
-                <!-- Image 1 -->
-                <div class="item">
-                    <img src="images/index/car.png" alt="car">
-                    <button class="dropdown-btn">▼</button>
-                    <div class="dropdown">
-                        <h3>Vehicle Structure</h3>
-                        <p>Our unique Vehicle Structure stands out from the rest and allows us to maintain the high
-                            visibility needed to protect our citizens!</p>
-                    </div>
-                </div>
-
-                <!-- Image 2 -->
-                <div class="item">
-                    <img src="images/coc.png" alt="Agent">
-                    <button class="dropdown-btn">▼</button>
-                    <div class="dropdown">
-                        <h3>FBI Uniform Structure</h3>
-                        <p>The Uniform Structure for the FBI provides high quality for our Agents while also allowing
-                            for
-                            comfortable custom uniforms that enable our Agents to perform at their highest!</p>
-                    </div>
-                </div>
-
-                <!-- Image 3 -->
-                <div class="item">
-                    <img src="images/index/heli.png" alt="heli">
-                    <button class="dropdown-btn">▼</button>
-                    <div class="dropdown">
-                        <h3>SUB DIVISIONS</h3>
-                        <p>Here at the FBI, we offer many Sub Divisions that afford us the ability to respond to any
-                            situations.
-                            From high-speed chases to having eyes in the sky, we are more than capable to answer the
-                            call!
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="video">
-                <iframe src="https://www.youtube.com/embed/3JggIZS73cI?si=ZvpF_CnCCRiYot4i&controls=1"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </section>
+        <section class="video">
+            <iframe src="https://www.youtube.com/embed/3JggIZS73cI?si=ZvpF_CnCCRiYot4i&controls=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </section>
 
 
 
@@ -148,30 +148,31 @@
 
 
 
-        </main>
+    </main>
 
-        <footer>
-            <div class="footer-content">
-                <p>Get in touch with me <a href="http://www.discordapp.com/users/314403159558848543"
-                        target="_blank">Obamayt</a></p>
-                <p>&copy; California Roleplay 2024</p>
-            </div>
-        </footer>
+    <div id="music-button">
+        <img id="toggle-icon" src="/images/play.png" alt="Play">
     </div>
 
 
+    <footer>
+        <div class="footer-content">
+            <p>Get in touch with me <a href="http://www.discordapp.com/users/314403159558848543"
+                    target="_blank">Obamayt</a></p>
+            <p>&copy; California Roleplay 2024</p>
+        </div>
+    </footer>
 
-    <iframe src="music-player.html" style="width: 0; height: 0; border: none;"></iframe>
+
+
     <script src="scripts/MusicPlayer.js"></script>
-
     <script src="scripts/header.js"></script>
     <script src="scripts/dropdowns.js"></script>
     <script src="scripts/hightlight.js"></script>
     <script src="scripts/openApp.js"></script>
 
-    <div id="music-button">
-        <img id="toggle-icon" src="/images/play.png" alt="Play">
-    </div>
+
+
 </body>
 
 </html>

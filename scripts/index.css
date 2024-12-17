@@ -32,7 +32,7 @@ main {
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius: 50%;
     display: flex;
@@ -53,6 +53,7 @@ main {
     height: 30px;
     user-select: none;
 }
+
 
 
 .sticky-header {
