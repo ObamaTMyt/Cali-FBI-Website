@@ -3,27 +3,60 @@ let audio;
 
 function toggleAudio() {
     if (!audio) {
+        const storedState = localStorage.getItem("audioState");
         const songs = [
             "Songs/sippin.wav",
-            "Songs/takemeout.wav",
-            "Songs/duality.wav",
             "Songs/church.wav",
-            "Songs/videoclub.wav",
             "Songs/Wreckonizer.wav",
+            "Songs/jungle.wav",
         ];
-        const randomIndex = Math.floor(Math.random() * songs.length);
-        audio = new Audio(songs[randomIndex]);
+        
+        if (storedState) {
+            const { song, currentTime } = JSON.parse(storedState);
+            audio = new Audio(song);
+            audio.currentTime = currentTime; // Resume at the saved time
+        } else {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            audio = new Audio(songs[randomIndex]);
+        }
+
+        audio.preload = "auto";
     }
 
     if (isPlaying) {
         audio.pause();
         document.getElementById("toggle-icon").src = "/images/play.png";
     } else {
-        audio.play();
+        audio.play().catch((error) => {
+            console.error("Playback failed:", error);
+        });
         document.getElementById("toggle-icon").src = "/images/pause.png";
     }
 
     isPlaying = !isPlaying;
 }
 
-document.getElementById("music-button").addEventListener("click", toggleAudio);
+// Save state before leaving the page
+window.addEventListener("beforeunload", () => {
+    if (audio) {
+        localStorage.setItem("audioState", JSON.stringify({
+            song: audio.src,
+            currentTime: audio.currentTime,
+        }));
+    }
+});
+
+document.getElementById("music-button").addEventListener("click", () => {
+    toggleAudio();
+});
+
+// Autoplay after the first user interaction
+document.addEventListener("DOMContentLoaded", () => {
+    const enableAutoplay = () => {
+        if (!isPlaying) {
+            toggleAudio();
+        }
+        document.removeEventListener("click", enableAutoplay); // Remove listener after first interaction
+    };
+    document.addEventListener("click", enableAutoplay);
+});

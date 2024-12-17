@@ -1,6 +1,5 @@
 function openModal() {
     const scrollY = window.scrollY;
-    document.documentElement.style.position = 'fixed';
     document.documentElement.style.top = `-${scrollY}px`;
     document.getElementById('formModal').style.display = 'block';
 }
@@ -11,4 +10,4 @@ function closeModal() {
     document.documentElement.style.top = '';
     window.scrollTo(0, scrollY);
     document.getElementById('formModal').style.display = 'none';
-}
+}   
