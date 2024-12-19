@@ -25,12 +25,12 @@ function toggleAudio() {
 
     if (isPlaying) {
         audio.pause();
-        document.getElementById("toggle-icon").src = "/images/play.png";
+        document.getElementById("toggle-icon").src = "images/play.png";
     } else {
         audio.play().catch((error) => {
             console.error("Playback failed:", error);
         });
-        document.getElementById("toggle-icon").src = "/images/pause.png";
+        document.getElementById("toggle-icon").src = "images/pause.png";
     }
 
     isPlaying = !isPlaying;
@@ -50,13 +50,12 @@ document.getElementById("music-button").addEventListener("click", () => {
     toggleAudio();
 });
 
-// Autoplay after the first user interaction
 document.addEventListener("DOMContentLoaded", () => {
     const enableAutoplay = () => {
         if (!isPlaying) {
             toggleAudio();
         }
-        document.removeEventListener("click", enableAutoplay); // Remove listener after first interaction
+        document.removeEventListener("click", enableAutoplay);
     };
     document.addEventListener("click", enableAutoplay);
 });
