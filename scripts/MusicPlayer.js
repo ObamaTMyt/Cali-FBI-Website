@@ -14,7 +14,7 @@ function toggleAudio() {
         if (storedState) {
             const { song, currentTime } = JSON.parse(storedState);
             audio = new Audio(song);
-            audio.currentTime = currentTime; // Resume at the saved time
+            audio.currentTime = currentTime;
         } else {
             const randomIndex = Math.floor(Math.random() * songs.length);
             audio = new Audio(songs[randomIndex]);
